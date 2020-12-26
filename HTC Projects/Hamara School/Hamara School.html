@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"-US>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Chiraag U">
+        <title>Hamara School</title>
+        <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/2883/2883815.svg">
+        <style>
+            *{
+                font-family: sans-serif;
+                overflow: hidden;
+                
+            }
+            body{
+                margin: 0px;
+            }
+            #Heading{
+                border-bottom: darkorange 1px Solid;
+            }
+            #Logo{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100px;
+                height: 100px;
+            }
+            #hs{
+                color: darkorange;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 0px;
+                font-size: 40px;
+            }
+            #Location{
+                color: darkorange;
+                text-align: center;
+                margin-top: 0px;
+            }
+            #Welcome{
+                text-transform: capitalize;
+                color: darkorange;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            #StudentRegistrationForm{
+                text-transform: uppercase;
+                text-align: center;
+                color: darkorange;
+            }
+            .O{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                
+            }
+            #entername{
+                    outline: none;
+                    border-radius: 15px;
+                    color: darkorange;
+                    border: darkorange solid 2px;
+                    box-shadow: 0 0px 9px 0 rgba(0, 0, 0, 0.2);
+                    font-size: 18px;
+                    float: left;
+                    margin-top: 15px;
+                    margin-left: 10px;
+                margin-bottom: 15px;
+                margin-right: 400px
+                    
+                    
+                }
+            ::placeholder{
+                    color: darkorange;
+                }
+            .options{
+                    font-size: 18px;
+                    color: darkorange;
+                    float: left;
+                    font-weight: bold;
+                text-align: right;
+                margin-left: 500px
+                }
+            #submit{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: darkorange;
+                color: white;
+                text-transform: uppercase;
+                border-radius: 15px;
+                font-size: 20px;
+                width: 150px;
+                 box-shadow: 0 0px 9px 0 rgba(0, 0, 0, 0.2);
+                border: none;
+                margin-top: 20px;
+                height: 35px;
+                border: white 3px solid;
+                outline: none;
+            }
+            .options1{
+                    font-size: 13px;
+                    color: darkorange;
+                    float: left;
+                    font-weight: bold;
+                text-align: right;
+                margin-right: 430px
+                }
+            #check{
+                margin-left: 600px
+            }
+            footer{
+                background-color: darkorange;
+                width: 100%;
+                height: 50px
+            }
+            #wdec{
+                color: white;
+                margin-left: 10px;
+                text-transform: uppercase;
+            }
+            #ias{
+                color: white;
+                margin-right: 5px;
+                font-size: 10px;
+                float: right;
+                margin-left: 550px
+            }
+
+            
+
+
+            
+            
+        </style>
+    </head>
+    <div id="Heading">
+        <img id="Logo" src="https://www.flaticon.com/svg/static/icons/svg/2883/2883815.svg" alt="Hamara School">
+        <h1 id="hs">Hamara School</h1>
+        <pre id="Location">                                                                       India</pre>
+    </div>
+    <div id="content">
+        <p id="Welcome">Welcome to the new Academic Year</p>
+        <p id="StudentRegistrationForm">Student Registration Form</p>
+    </div>
+    <div id="body">
+        
+        <table border="0px" width="100%" height="100%">
+            <tr>
+                <td><p  class="options">Student Name</p></td>
+                <td><input id="entername" placeholder=" Enter Student Name"></td>
+            </tr>
+                        <tr>
+                <td><p  class="options">Parent Name</p></td>
+                <td><input id="entername" placeholder=" Enter Parent Name"></td>
+            </tr>
+                        
+                 <tr>
+                <td><p  class="options">Mobile Number</p></td>
+                <td><input  type="number" id="entername" placeholder=" Enter Mobile Number"></td>
+            </tr>           <tr>
+                <td><p  class="options">Class</p></td>
+                <td><input  id="entername" placeholder=" Enter Class"></td>
+            </tr>
+            <tr>
+                <td><input  id="check" type="checkbox" ></td>
+                <td><p  class="options1">I agree to follow Hamara School Rules</p></td>
+            </tr>
+            
+        </table>
+        <button id="submit" onclick="functions()">Submit</button>
+        <footer width="100%" height="50px" id="footer">
+            <table>
+                <tr>
+                    <td><p id="wdec">Website Designed by Chiraag</p></td>
+                    <td><p id="ias">Images are sourced from Internet are subject to respective owners rights & used here for study purpose only</p></td>
+                </tr>
+            </table>
+        
+        </footer>
+    </div> 
+    <script>
+        function functions(){
+            var speak = "Thanks for Registering in Hamara School. You will recive a notification to the Registered Mobile Number."
+            alert(speak);
+        }
+    </script>
+</html>

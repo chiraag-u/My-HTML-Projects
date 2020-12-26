@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+    <link rel="icon" href= "https://firebasestorage.googleapis.com/v0/b/canvas-help.appspot.com/o/Immuntiy%20Booster.png?alt=media&token=2070f81c-1a6c-420c-820f-0138ff646ec0">
+    <title>Immunity Boosters</title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+    font-family:sans-serif;
+                
+    font-weight:bolder;          
+
+}
+body, ul, li{
+    margin:0;
+    padding:0;
+}
+p, li, h1,h3, h4{
+    color:white;
+    font-size: 30;
+}
+
+            h2{
+                color:chartreuse
+            }            
+            
+body{
+    background-color: white;
+}
+.wrapper{
+    width:96%;
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 2%;
+    
+}
+
+            
+header{
+    background-color: chartreuse;
+    padding:10px 0
+}
+.logo{
+    margin:0;
+    color: white;
+   font-size: 25px;
+    float:left;
+    width:70px;
+    height:70px;
+}
+header:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+header nav{
+    float:right;
+}
+
+header nav li{
+    list-style-type:none;
+    float:left;
+    margin-left:20px;
+    margin-top:20px;
+}
+header nav li a{
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    text-transform: uppercase;
+}
+            #main-banner{
+    width:100%;
+    max-height:400px;
+    overflow:hidden;
+}
+#main-banner img{
+    width:100%;
+}
+#slider{
+    overflow: hidden;
+}
+#slides{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 18s slidy infinite;  
+}
+#slides img {
+    width:20%;
+    float:left;
+}
+/* Animation */ 
+@keyframes slidy {
+0% { left: 0%; }
+28% { left: 0%; }
+33% { left: -100%; }
+61% { left: -100%; }
+66% { left: -200%; }
+94% { left: -200%; }
+100% { left: 0%; }
+}
+            #usp{
+                margin-top: 60px;
+                
+            }
+            
+            #usp li{
+                float: left;
+                width: 23%;
+               padding: 1%;
+                text-align: center;
+                list-style-type: none
+                
+            }
+            
+            #usp li img{
+                
+            height: 80px;
+            padding: 20px;
+                background-color: chartreuse;
+                border-radius: 50%;
+                
+            }
+            
+            #usp li h2{
+                font-size: 20px;
+            }
+            #usp:after {
+                content: "";
+                display: block;
+                clear: both
+            }
+            #pfp{
+             color: chartreuse;
+                font-size: 17px;
+                font-weight: lighter
+            }
+            #products{
+                padding-top: 30px;
+                margin-top: 30px;
+                border-top: 2px solid chartreuse;
+                
+            }
+            #products li{
+                float: left;
+                list-style-type: none;
+                width: 32%;
+                text-align: center
+            }
+            #products li img {
+                width: 100%;
+
+            }
+            
+            
+            /*Giving Gap between Images*/    
+    
+            #products li:nth-child(even) {
+                margin: 0 1%;}
+            /*Giving Gap between Images*/  
+            
+                       #products:after {
+                content: "";
+                display: block;
+                clear: both
+            }
+            
+            #productheading {
+                text-align: center;
+                font-size: 40px
+            }
+
+            footer{
+                width: 100%;
+                background-color: chartreuse;
+                padding: 5px 0;
+                margin-top: 60;
+            
+            
+            }
+            footer ul{
+                float: right;
+                margin: 1%;
+                width: 80%;
+            }
+            footer:after {
+                content: "";
+                display: block;}
+            #fl {
+                
+                margin-left: 10px;
+                    color: white;
+                width: 60%;
+                font-size: 30px
+            }
+            #fq {
+                color: white;
+                font-size: 15px;
+            text-align: right;
+            }
+              
+
+        </style>
+    <head>
+    <body onload="userattention()">
+                    <script>
+        
+            function userattention(){
+                var name= prompt("Hello User, Nice to see you here, What is your Name?");
+                var msg;
+                var date=new Date();
+                var hour=date.getHours();
+
+                
+                if (hour<12){
+                    msg = "Hello " + name +" Good Morning, Check out our latest products";
+                    alert(msg);
+                }
+                
+                else if (hour>12 && hour<16){
+                    msg = "Hello " + name + " Good Afternoon, Check out our latest products"
+                    alert(msg)
+                }
+                else if(hour>16 && hour<23){
+                msg="Hello "+name+" Good Evening, Check out our latest products";
+                alert(msg);
+            }
+                else{
+                msg="Hello " + name+", Check out our latest products";
+                alert(msg);
+
+            }
+            }
+        
+        </script>
+        <!-- Header Starts -->
+        <header>
+            <div class="wrapper">
+                <div class="logo">AyurMALL</div>
+                <nav>
+                    <div class="menu"></div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Header Ends -->
+        
+        <!-- Banner Starts -->
+        <div id="main-banner">
+            <div id="slider">
+                <div id="slides">
+                    <img src="https://i.pinimg.com/originals/17/28/1e/17281ec26fec663353451fc408fd2715.jpg" alt="banner">
+                    <img src="https://www.drshikhasharma.com/wp-content/uploads/2019/06/Ayurvedic-Practices-To-Adopt-In-Summers.jpg" alt="banner">
+                    <img src="https://boostthyself.com/wp-content/uploads/2017/09/ayurveda-1.jpg" alt="banner">
+                </div>
+            </div>
+        </div>
+        <!-- Unique Selling Proposition Starts -->
+        <div class="wrapper">
+            <section id="usp">
+                <ul>
+                    <li>
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/3063/3063202.svg">
+                    <h2>Immunity Boosters of Ayurveda</h2>
+                    </li>
+                    
+                     <li>
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/814/814513.svg">
+                    <h2>All around the World</h2>
+                    </li>
+                    
+                    <li>
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/3039/3039872.svg">
+                    <h2>With Solutions of Ancient Books</h2>
+                    </li>
+                    
+                    <li>
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/3011/3011121.svg">
+                    <h2>Have any Doubts or issues call us anytime</h2>
+                    </li>
+                </ul>
+                
+            
+            </section>
+        
+        </div>
+        <!-- Product Starts -->
+        <div class="wrapper">
+        <section id="products">
+            <h2 id="productheading">Our Products</h2>
+            <ul>
+                <li> 
+                    <img src ="https://static.toiimg.com/photo/66330190.cms" >
+                    <h2>Amla</h2>
+                    <p id="pfp">In traditional Indian medicine, dried and fresh fruits of the plant are used. All parts of the plant are used in various Ayurvedic medicine herbal preparations, including the fruit, seed, leaves, root, bark and flowers. 
+
+In Ayurvedic polyherbal formulations, Indian gooseberry is a common constituent, and most notably is the primary ingredient in an ancient herbal rasayana called Chyawanprash.</p>
+                </li>
+                                <li> 
+                    <img src ="https://static.toiimg.com/photo/66330190.cms" >
+                    <h2>Tulsi</h2>
+                    <p id="pfp">Tulsi (Sanskrit:-Surasa) has been used in Ayurveda and Siddha practices for its supposed treatment of diseases. The three main morphotypes cultvated in India and Nepal are Ram tulsi (the most common type, with broad bright green leaves that are slightly sweet), the less common purplish green-leaved (Krishna tulsi) and the common wild vana tulsi.</p>
+                </li>
+                                <li> 
+                    <img src ="https://static.toiimg.com/photo/66330190.cms" >
+                    <h2>Ashvagandha</h2>
+                    <p id="pfp">Ashvagandha is particularly its root powder, has been used for centuries in traditional Indian medicine.[4][7] Mainly due to the poor quality of clinical research, there is no high-quality evidence that it provides any medicinal benefit and may cause adverse effects if taken together with prescription drugs.</p>
+                </li>
+            </ul>
+            </section>
+            
+        </div>
+        
+        <!-- Footer -->
+        
+        <footer>
+            <table>
+            <tr>
+                <td id="fl">Website Designed by Chiraag</td>
+                <td id="fq">Images are sourced from Internet are subject to respective owners rights & used here for study purpose only.</td>
+                </tr>
+            </table>
+  
+        </footer>
+        
+
+    </body>
+
+</html>

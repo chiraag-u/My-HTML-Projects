@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <title>My Salon</title>
+    <style>
+        body{
+            padding-left: 150px;
+            padding-right: 150px
+        }
+        *{
+            font-family: sans-serif
+        }
+        img{
+            margin-left: 45%;
+            width: 200px;
+            height: 200px;
+
+        }
+        #heading{
+            text-transform: uppercase;
+            font-size: 50px;
+            margin-bottom: 50px
+        }
+        pre{
+            text-transform: uppercase;
+            text-align: right;
+            font-weight: bold;
+            font-size: 20px;
+            
+        }
+        #Name{
+            margin-left: 35%;
+            width: 30%
+        }
+         #No{
+            margin-left: 35%;
+            width: 30%
+        }
+        #Date{
+            margin-left: 35%;
+            width: 30%
+        }
+        #Time{
+            margin-left: 35%;
+            width: 30%
+        }
+        #button{
+            margin-left: 47%
+;
+        margin-top:25px }
+        
+        #image{
+            width: 200px;
+            
+        }
+        p{
+            margin-top: -50px;
+            font-weight: bold;
+        }
+        #footer{
+            position: absolute;
+            bottom: 0;
+            width: 80%;
+        }
+        #© {
+            float: right;
+            font-size: 10px;
+            text-align: right;
+            margin-top: 200px
+        }
+        #develop {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 20px
+            
+        }
+        .all {
+          position: absolute;
+            right: 10;
+            margin-top: -50px;
+        }
+        
+        #divider{
+            transform: rotate(90deg);
+            width: 400px;
+            margin-top: -200px;
+            margin-left: 300px
+
+        }
+
+        
+
+
+
+    </style>
+    
+        <body>
+            <div>            <h1 id="heading">Home Salon</h1> <p>SOLUTION FOR YOUR HAIR GROMMING AT PANDEMIC TIMES</p>
+        <pre>NO QUEUE !
+       NO WAITING TIME !!
+       BOOK @ YOUR CONVENIENCE !!!
+        </pre></div>
+            
+
+            <table  width="100%" height="100%">
+                <tr>
+                <td id="image"><img alt="Internet" src="https://webstockreview.net/images/clipart-scissors-haircut-scissors-2.png"></td>
+                    <div id="sep"></div>
+                    <td><input class="all" id="Name" type="text" placeholder="Enter your Name"><br><br>
+            <input id="No" class="all" type="number" placeholder="Enter your Mobile Number"><br><br>
+        <input id="Date" class="all" type="date" placeholder="Enter the Date of Hair Cut"><br><br>
+        <input id="Time" class="all" type="time" placeholder="Enter the Time of Hair Cut"><br><br>
+        <button id="button" class="all" onclick="functions()">Book Now</button></td>
+                    
+                </tr>
+            
+            </table>
+            <img id="divider" src="https://cdn.pixabay.com/photo/2020/06/19/17/41/divider-5318234_960_720.png">
+            <div id="footer">
+                <i id="develop">WEBSITE DESIGNED BY CHIRAAG</i>
+                <p id="©">Images are sourced from Internet are subject to respective owners rights & used here for study purpose only.</p>
+            </div>
+            
+        </body>
+        <script>
+       function functions(){
+            var speak = "Your Booking is Accepted"
+            alert(speak);
+        }
+        </script>
+
+    
+</html>

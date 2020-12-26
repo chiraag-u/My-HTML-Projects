@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"-US>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Chiraag U">
+        <title>Hamara School</title>
+        <link rel="icon" href="https://t4.ftcdn.net/jpg/00/82/56/61/240_F_82566172_tnGJVl0JzxJReC6qQFqCNRxlDMw2twjd.jpg">
+        <style>
+            *{
+                font-family: sans-serif;
+                overflow: hidden;
+                
+            }
+            body{
+                margin: 0px;
+            }
+            #Heading{
+                border-bottom: deepskyblue 1px Solid;
+            }
+            #Logo{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100px;
+                height: 100px;
+            }
+            #hs{
+                color: deepskyblue;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 0px;
+                font-size: 40px;
+                margin-top: -5px
+            }
+            #Location{
+                color: deepskyblue;
+                text-align: center;
+                margin-top: 0px;
+            }
+            #Welcome{
+                text-transform: capitalize;
+                color: deepskyblue;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            .O{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                
+            }
+            #entername{
+                    outline: none;
+                    border-radius: 15px;
+                    color: deepskyblue;
+                    border: deepskyblue solid 2px;
+                    box-shadow: 0 0px 9px 0 rgba(0, 0, 0, 0.2);
+                    font-size: 18px;
+                    float: left;
+                    margin-top: 15px;
+                    margin-left: 10px;
+                margin-bottom: 15px;
+                margin-right: 400px;
+                width:250px;
+                    
+                    
+                }
+            ::placeholder{
+                    color: deepskyblue;
+                }
+            .options{
+                    font-size: 18px;
+                    color: deepskyblue;
+                    float: left;
+                    font-weight: bold;
+                text-align: right;
+                margin-left: 500px
+                }
+            #submit{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: deepskyblue;
+                color: white;
+                text-transform: uppercase;
+                border-radius: 15px;
+                font-size: 20px;
+                width: 250px;
+                 box-shadow: 0 0px 9px 0 rgba(0, 0, 0, 0.2);
+                border: none;
+                margin-top: 20px;
+                height: 35px;
+                border: white 3px solid;
+                outline: none;
+            }
+            .options1{
+                    font-size: 13px;
+                    color: deepskyblue;
+                    float: left;
+                    font-weight: bold;
+                text-align: right;
+                margin-right: 430px
+                }
+            #check{
+                margin-left: 600px
+            }
+            footer{
+                background-color: deepskyblue;
+                width: 100%;
+                height: 50px;
+                bottom: 0;
+                position: absolute;
+            }
+            #wdec{
+                color: white;
+                margin-left: 10px;
+                text-transform: uppercase;
+            }
+            #ias{
+                color: white;
+                margin-right: 5px;
+                font-size: 10px;
+                float: right;
+                margin-left: 550px
+            }
+
+            
+
+
+            
+            
+        </style>
+    </head>
+    <div id="Heading">
+        <img id="Logo" src="https://t4.ftcdn.net/jpg/00/82/56/61/240_F_82566172_tnGJVl0JzxJReC6qQFqCNRxlDMw2twjd.jpg" alt="Doctor">
+        <h1 id="hs">My Clinic</h1>
+      
+    </div>
+    <div id="content">
+        <p id="Welcome">Welcome to the My Clinic</p>
+        
+    </div>
+    <div id="body">
+        
+        <table border="0px" width="100%" height="100%">
+            <tr>
+                <td><p  class="options">Name</p></td>
+                <td><input id="entername" placeholder=" Enter Name"></td>
+            </tr>
+                        
+                 <tr>
+                <td><p  class="options">Mobile Number</p></td>
+                <td><input  type="number" id="entername" placeholder=" Enter Mobile Number"></td>
+            </tr>           <tr>
+                <td><p  class="options">Enter the Date Slot</p></td>
+                <td><input type="date" id="entername" placeholder=" Enter Class"></td>
+            </tr><tr>
+                <td><p  class="options">Enter the Time Slot</p></td>
+                <td><input type="time" id="entername" placeholder=" Enter Class"></td>
+            </tr>
+            
+            
+        </table>
+        <button id="submit" onclick="functions()">Confirm Booking</button>
+        <footer width="100%" height="50px" id="footer">
+            <table>
+                <tr>
+                    <td><p id="wdec">Website Designed by Chiraag</p></td>
+                    <td><p id="ias">Images are sourced from Internet are subject to respective owners rights & used here for study purpose only</p></td>
+                </tr>
+            </table>
+        
+        </footer>
+    </div> 
+    <script>
+        function functions(){
+            var speak = "Your Appointment is Confirmed"
+            alert(speak);
+        }
+    </script>
+</html>
