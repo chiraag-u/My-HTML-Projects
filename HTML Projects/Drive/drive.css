@@ -1,0 +1,266 @@
+@font-face {
+    font-family: Font;
+    src: url(../files/Font.ttf);
+}
+
+:root{
+    --Color:#0C91E0;
+    --LightWhite:#F5F5F5;
+    --Border: #DDD;
+    --Light:#F1F3F4;
+    --Dark: #575757;
+}
+
+body{
+    background-color: var(--LightWhite);
+    margin: 0;
+    font-family: 'Font', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+header{
+    background-color: white;   
+    width: 100%;
+    height: 39px;
+    border-bottom: 1px solid var(--Border);
+    box-sizing: border-box;
+    display: flex;
+}
+
+.Logo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.Logo svg{
+    fill: var(--Color);
+    width: 27px;
+    height: 27px;
+}
+
+.Logo p{
+    margin: 0;
+    font-size: 28px;
+    color: var(--Color);
+    margin-left: 5px;
+}
+
+.SearchBar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ControlsC{
+    height: 100%;
+    display: flex;
+}
+
+.Controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 63px;
+    cursor: pointer;
+}
+
+.Controls svg{
+    fill: var(--Color);
+    width: 27px;
+    height: 27px;
+}
+
+.Controls:hover{
+    background-color: #00000006;
+}
+
+section{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+aside{
+    width: 261px;
+    height: 100%;
+    background-color: white;
+    border-right: 1px solid var(--Border);
+    box-sizing: border-box;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Properties{
+    width: 95%;
+    padding-left: 13px;
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.Properties svg{
+    width: 24px;
+    height: 24px;
+    fill: var(--Dark);
+}
+
+.Properties p{
+    margin: 0;
+    color: var(--Dark);
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.Selected{
+    background-color: #0C91E020 !important;
+}
+
+.Selected p{    
+    color: var(--Color) !important;
+}
+
+.Selected svg{
+    fill: var(--Color) !important;
+}
+
+.Space{
+    width: 100%;
+    height: 100%;
+}
+
+.Content{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.Path{
+    height: 40px;
+    border-bottom: 1px solid var(--Border);
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.Path span{
+    color: var(--Color);
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.Path svg{
+    width: 30px;
+    height: 30px;
+    fill: var(--Color);
+}
+
+.FileIconH{
+    width: 40px;
+    text-align: end;
+    flex-direction: row-reverse;
+    padding-right: 8px;
+}
+
+.FileIconH svg{
+    width: 25px;
+    margin-top: 6.4px;
+    height: 25px;
+    fill: var(--Color);
+}
+
+table, tr, td{
+    border-spacing: 0;
+    padding: 0;
+}
+
+.FileHeader{
+    margin-top: 2px;
+    border-bottom: 1px solid var(--Border);
+}
+
+.DriveFile{
+    border-bottom: 1px solid var(--Border);
+}
+
+.FileHeader td{
+    color: var(--Color);
+    font-size: 20px;
+}
+
+.DriveFile{    
+    color: var(--Dark);
+    font-size: 18px;
+    padding-left: 15px;
+
+}
+
+.FileNameH{
+    width: 295px;
+}
+
+.UC{ 
+    width: 95%;
+    padding-left: 13px;
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.UC p{
+    margin: 0;
+    color: var(--Dark);
+    font-size: 19px;
+    margin-left: 8px;
+}
+
+.UC svg{
+    fill: var(--Dark);    
+}
+
+.Section{
+    background-color: var(--Border);
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.UC:hover{
+    background-color: #00000006;
+}
+
+.DriveFileIcon{
+    width: 23px;
+    height: 23px;
+}
+
+.DriveFileIcon svg{
+    fill: var(--Dark);
+}
+
+.DriveDate{
+    width: 37px;
+}
