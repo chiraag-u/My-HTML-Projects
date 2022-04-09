@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Screen</title>
+    <script src="https://www.dukelearntoprogram.com//course1/common/js/cs101/SimpleImage.js"></script>
+</head>
+
+<body>
+    <canvas id="Canvas"></canvas><br><br>
+
+    Click on the circle <b>Radio Button</b><br><br>
+
+    <input type="radio" name="Choose" value="Green Screen">Green Screen<br>
+    <input type="radio" name="Choose" value="GrayScale">GrayScale <br>
+    <input type="radio" name="Choose" value="Red">Red <br>
+    <input type="radio" name="Choose" value="Blue">Blue <br>
+    <input type="radio" name="Choose" value="Green">Green <br>
+    <input type="radio" name="Choose" value="Original" checked>Original <br>
+
+    <br><br><br><br><br>
+
+    Chose Foreground Image <input type="file" accept="image/*" id="Foreground"><br><br>
+    <div id="BackChoose" hidden>Chose Background Image <input type="file" accept="image/*" id="Background"><br><br>
+    </div>
+    <script>
+        var Foreground = new Image(),
+            Background = new Image(),
+            Opt = "Original";
+        document.getElementById("Foreground").addEventListener("change", function (e) {
+            Foreground.src = URL.createObjectURL(e.target.files[0]);
+            Foreground.onload = function () {
+                Create();
+            };
+        });
+        document.getElementById("Background").addEventListener("change", function (e) {
+            Background.src = URL.createObjectURL(e.target.files[0]);
+            Background.onload = function () {
+                Create();
+            };
+        });
+
+        function Create() {
+            switch (Opt) {
+                case "Green Screen":
+                    if (Foreground.src != "" && Background.src != "") {
+                        Background.width = Foreground.width;
+                        Background.height = Foreground.height;
+                        var Blank = new SimpleImage(Foreground.width, Foreground.height);
+                        var ForegroundImage = new SimpleImage(Foreground);
+                        var BackgroundImage = new SimpleImage(Background);
+                        const Pixels = Blank.values();
+                        for (let i = 0; i < Pixels.length; i++) {
+                            const BlankPixel = Pixels[i],
+                                ForegroundPixel = ForegroundImage.getPixel(
+                                    BlankPixel.getX(),
+                                    BlankPixel.getY()
+                                ),
+                                BackgroundPixel = BackgroundImage.getPixel(
+                                    BlankPixel.getX(),
+                                    BlankPixel.getY()
+                                );
+                            if (
+                                ForegroundPixel.getGreen() >=
+                                ForegroundPixel.getRed() + ForegroundPixel.getBlue()
+                            ) {
+                                Blank.setPixel(
+                                    BlankPixel.getX(),
+                                    BlankPixel.getY(),
+                                    BackgroundPixel
+                                );
+                            } else {
+                                Blank.setPixel(
+                                    BlankPixel.getX(),
+                                    BlankPixel.getY(),
+                                    ForegroundPixel
+                                );
+                            }
+                        }
+                        Blank.drawTo(document.getElementById("Canvas"));
+                    }
+                    break;
+
+                case "GrayScale":
+                    if (Foreground.src != "") {
+                        var ForegroundImage = new SimpleImage(Foreground);
+                        const Pixels = ForegroundImage.values();
+                        for (let i = 0; i < Pixels.length; i++) {
+                            const Pixel = Pixels[i];
+                            const Average =
+                                (Pixel.getRed() + Pixel.getBlue() + Pixel.getGreen()) / 3;
+                            Pixel.setRed(Average);
+                            Pixel.setGreen(Average);
+                            Pixel.setBlue(Average);
+                            ForegroundImage.setPixel(Pixel.getX(), Pixel.getY(), Pixel);
+                        }
+                        ForegroundImage.drawTo(document.getElementById("Canvas"));
+                    }
+                    break;
+
+                case "Red":
+                case "Blue":
+                case "Green":
+                    if (Foreground.src != "") {
+                        var ForegroundImage = new SimpleImage(Foreground);
+                        const Pixels = ForegroundImage.values();
+                        for (let i = 0; i < Pixels.length; i++) {
+                            const Pixel = Pixels[i];
+                            if (Opt == "Red") {
+                                Pixel.setRed(255);
+                            } else if (Opt == "Blue") {
+                                Pixel.setBlue(255);
+                            } else if (Opt == "Green") {
+                                Pixel.setGreen(255);
+                            }
+                            ForegroundImage.setPixel(Pixel.getX(), Pixel.getY(), Pixel);
+                        }
+                        ForegroundImage.drawTo(document.getElementById("Canvas"));
+                    }
+                    break;
+
+                case "Original":
+                    new SimpleImage(Foreground).drawTo(document.getElementById("Canvas"));
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        for (const Radio of document.getElementsByName("Choose")) {
+            Radio.addEventListener("change", function () {
+                Opt = Radio.value;
+                if (Opt == "Green Screen") {
+                    document.getElementById("BackChoose").style.display = "initial";
+                } else {
+                    document.getElementById("BackChoose").style.display = "none";
+                }
+                Create();
+            });
+        }
+
+    </script>
+</body>
+
+</html>
